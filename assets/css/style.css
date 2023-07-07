@@ -1,0 +1,486 @@
+
+/* 
+    Template Name: Travel Project
+    Author Name: Arnob Das Dipto
+    Description: Using HTML, CSS, JQUERY, JAVA-SCRIPT
+
+    Index 
+
+    ----
+    01. Reset CSS
+    02. Header CSS
+    03. Bannar CSS
+    04. About CSS
+    05. Destination CSS
+    06. Package CSS
+    07. Team CSS
+    08. Blog CSS
+    09. Footer CSS
+*/
+
+/* 01. Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap');
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+.btn {
+    border: 2px solid #f15d30;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 8px 25px;
+    color: #fff;
+    transition: .3s;
+}
+.btn:hover {
+    background-color: #f15d30;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title p {
+    text-transform: capitalize;
+    font-size: 26px;
+    line-height: 40px;
+}
+.section-title h4 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 50px;
+    position: relative;
+    padding-bottom: 20px;
+}
+.section-title h4:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #f15d30;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 02. Header CSS */
+.header-area {
+    padding: 30px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.header-info a {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #fff;
+}
+.header-info a:hover {
+    color: #f15d30;
+}
+.header-social a {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+.header-social a:hover {
+    color: #f15d30;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.menu {
+    display: flex;
+}
+.menu li a {
+    margin: 0 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu li a:hover {
+    color: #f15d30;
+}
+.menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+}
+
+/* 03. Bannar CSS */
+.bannar-area {
+    height: 100vh;
+    padding: 250px 0 100px;
+    position: relative;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+}
+.bannar-area:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: .7;
+}
+.bannar {
+    color: #fff;
+    text-align: center;
+}
+.bannar h4 {
+    text-transform: capitalize;
+    font-size: 35px;
+}
+.bannar h1 {
+    font-size: 80px;
+    line-height: 90px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+/* 04. About CSS */
+.about-area {
+    padding: 100px 0;
+}
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-content {
+    flex-basis: 55%;
+}
+.about-content span {
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.about-content h4 {
+    text-transform: capitalize;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+.about-content p {
+    margin-bottom: 20px;
+}
+.about-content a {
+    color: #333;
+}
+.about-img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 40%;
+}
+.single-img {
+    flex-basis: 48%;
+    margin: 10px 0;
+}
+.single-img img {
+    border: 2px solid #333;
+    padding: 3px;
+}
+
+/* 05. Destination CSS */
+.destination-area {
+    background-color: #333;
+    color: #fff;
+    padding: 100px 0;
+}
+.destinations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.single-destination {
+    flex-basis: 32%;
+    position: relative;
+    margin-bottom: 30px;
+}
+.single-destination img {
+    border-radius: 7px;
+}
+.destination-content {
+    content: "";
+    position: absolute;
+    background-color: #f15d30;
+    left: 10%;
+    bottom: 10%;
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.destination-content h4 {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.destination-content h4 span {
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+}
+.destination-content a {
+    font-size: 50px;
+    color: #fff;
+}
+
+/* 06. Package CSS */
+.packages-area {
+    padding: 100px 0;
+}
+.packages {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.single-package {
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+.single-package img {
+    width: 100%;
+}
+.single-package h4 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+.package-meta {
+    display: flex;
+    justify-content: space-evenly;
+    border-top:  1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 10px 0;
+}
+.single-package a {
+    color: #f15d30;
+    text-transform: uppercase;
+    display: block;
+    margin: 14px 0;
+}
+
+/* 07. Team CSS */
+.team-area {
+    background-color: #333;
+    color: #fff;
+    padding: 100px 0;
+}
+.teams {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.single-team {
+    flex-basis: 24%;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+.single-team h4 {
+    padding: 20px 0;
+    font-size: 26px;
+    text-transform: capitalize;
+}
+.single-team h4 span {
+    display: block;
+    font-size: 16px;
+}
+
+/* 08. Blog CSS */
+.blogs-area {
+    padding: 100px 0;
+}
+.blogs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.single-blog {
+    flex-basis: 32%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.blog-img {
+    position: relative;
+}
+.blog-img span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f15d30;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    font-weight: 600;
+}
+.blog-meta {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 10px;
+}
+.blog-meta a {
+    text-transform: capitalize;
+    padding-bottom: 0;
+    color: #333;
+}
+.blog-meta a:hover {
+    color: #f15d30;
+}
+.single-blog h4 {
+    padding-left: 15px;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+.single-blog p {
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+.single-blog a {
+    color: #f15d30;
+    text-align: center;
+    border: none;
+}
+.single-blog a:hover {
+    color: #333;
+}
+
+/* 09. Footer CSS */
+.footer-area {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 60px 0;
+    color: #fff;
+    z-index: 2;
+}
+.footer-area:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .9;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer a {
+    color: #fff;
+}
+.single-footer:nth-child(1) {
+    flex-basis: 30%;
+    text-align: center;
+}
+.single-footer:nth-child(4) {
+    flex-basis: 30%;
+}
+.single-footer h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.single-footer p {
+    margin: 20px 0;
+}
+.footer-social a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.single-footer h4 {
+    font-size: 24px;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.single-footer h4:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #f15d30;
+    bottom: 0;
+    left: 0;
+}
+.single-footer ul li {
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+.single-footer ul li a:hover {
+    color: #f15d30;
+}
+.copy {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #333;
+    padding: 10px;
+    margin-top: 25px;
+}
